@@ -94,6 +94,7 @@ func (b *Bot) set(msg *tgbotapi.Message) tgbotapi.MessageConfig {
 		return res
 	}
 	err := b.service.Set(&models.PasswordRecord{
+		Username: msg.From.UserName,
 		Service:  service,
 		Password: password,
 	})
@@ -114,8 +115,7 @@ func (b *Bot) get(msg *tgbotapi.Message) tgbotapi.MessageConfig {
 		res := tgbotapi.NewMessage(msg.Chat.ID, esc(pkg.MsgRepositoryError))
 		return res
 	case val == nil:
-		text := fmt.Sprintf(esc(pkg.MsgErrorGet), esc(msg.Text))
-		res := tgbotapi.NewMessage(msg.Chat.ID, text)
+		res := tgbotapi.NewMessage(msg.Chat.ID, pkg.MsgErrorGet)
 		return res
 	}
 	res := tgbotapi.NewMessage(msg.Chat.ID, esc(val.Password))
