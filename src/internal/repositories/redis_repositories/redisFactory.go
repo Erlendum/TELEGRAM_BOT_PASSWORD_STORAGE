@@ -29,7 +29,7 @@ func CreateRedisRepositoryFields(fileName, filePath string) (*RedisRepositoryFie
 	return fields, nil
 }
 
-func CreatePasswordRecordRedisRepository(fields *RedisRepositoryFields) repositories.PasswordRecord {
+func CreatePasswordRecordRedisRepository(fields *RedisRepositoryFields) repositories.PasswordRecordRepository {
 	return NewPasswordRecordRedisRepository(fields)
 }
 

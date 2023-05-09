@@ -15,7 +15,7 @@ type PasswordRecordRedisRepository struct {
 	ExpireSeconds time.Duration
 }
 
-func NewPasswordRecordRedisRepository(fields *RedisRepositoryFields) repositories.PasswordRecord {
+func NewPasswordRecordRedisRepository(fields *RedisRepositoryFields) repositories.PasswordRecordRepository {
 	return &PasswordRecordRedisRepository{Client: fields.Client, ExpireSeconds: fields.ExpireSeconds}
 }
 
