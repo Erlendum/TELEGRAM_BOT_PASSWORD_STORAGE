@@ -1,4 +1,4 @@
-package implementation
+package services_implementation
 
 import (
 	"src/internal/models"
