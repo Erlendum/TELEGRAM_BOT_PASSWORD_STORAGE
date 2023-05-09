@@ -6,7 +6,8 @@ import (
 )
 
 type Config struct {
-	Redis flags.RedisFlags `mapstructure:"redis"`
+	Redis flags.RedisFlags       `mapstructure:"redis"`
+	Bot   flags.TelegramBotFlags `mapstructure:"bot"`
 }
 
 func (c *Config) ParseConfig(configFileName, pathToConfig string) error {
