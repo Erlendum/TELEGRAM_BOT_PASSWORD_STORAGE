@@ -1,0 +1,12 @@
+{
+  "redis": {
+    "host": "redis_container",
+    "port": "6379",
+    "db": 0,
+    "password": "parasha",
+    "expireSeconds": 86400
+  },
+  "bot": {
+    "token": "6277597961:AAGfGZtAgiDTnvr3JocuuVz7Tu-or50_mmQ"
+  }
+}

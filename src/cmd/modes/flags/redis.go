@@ -8,10 +8,9 @@ import (
 
 type RedisFlags struct {
 	Host          string `mapstructure:"host"`
-	User          string `mapstructure:"user"`
-	Password      string `mapstructure:"password"`
 	Port          string `mapstructure:"port"`
 	DB            int    `mapstructure:"db"`
+	Password      string `mapstructure:"password"`
 	ExpireSeconds int    `mapstructure:"expireSeconds"`
 }
 
