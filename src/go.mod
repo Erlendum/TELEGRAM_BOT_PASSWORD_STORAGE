@@ -3,6 +3,7 @@ module src
 go 1.18
 
 require (
+	github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1
 	github.com/redis/go-redis/v9 v9.0.4
 	github.com/spf13/viper v1.15.0
 )
